@@ -1,0 +1,34 @@
+// Colors
+
+$magenta: rgba(219, 30, 87, 1); // #DB1E58
+$yellow: rgba(236, 181, 30, 1); // #ECB61E
+$green: rgba(0, 166, 83, 1); // #00A652
+
+// Sizes
+
+$nav-height: 80px;
+
+// Mixins
+
+@mixin f-style($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+#navbar {
+    background-color: #DB1E58;
+    height: $nav-height;
+    width: 100%;
+    padding: 0 20px;
+    @include f-style(row, space-between, center);
+    position: fixed;
+    #nav-logo {
+        height: 100%;
+        width: auto;
+    }
+    #navlink-box {
+        border: 1px solid white;
+    }
+}

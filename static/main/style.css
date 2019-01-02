@@ -1,0 +1,30 @@
+#navbar {
+  background-color: #DB1E58;
+  height: 80px;
+  width: 100%;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+}
+
+#navbar #nav-logo {
+  height: 100%;
+  width: auto;
+}
+
+#navbar #navlink-box {
+  border: 1px solid white;
+}
+/*# sourceMappingURL=style.css.map */

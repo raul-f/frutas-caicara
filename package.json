@@ -1,0 +1,24 @@
+{
+  "name": "frutas-caicara",
+  "version": "0.0.0",
+  "description": "Webpage for a fruit distribution company based in BA-Brasil.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raul-f/frutas-caicara.git"
+  },
+  "author": "raul-f <raulf.dev@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raul-f/frutas-caicara/issues"
+  },
+  "homepage": "https://github.com/raul-f/frutas-caicara#readme",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4"
+  }
+}
