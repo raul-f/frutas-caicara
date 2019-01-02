@@ -1,3 +1,7 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
 #navbar {
   height: 80px;
   width: 100%;
@@ -66,15 +70,24 @@
           animation-fill-mode: forwards;
 }
 
+#first-section {
+  background-image: url("two-ripe-mangoes-1920x1080px.png");
+  padding-top: 80px;
+  min-height: 100vh;
+  max-width: 100%;
+  background-size: 100vw;
+  background-repeat: no-repeat;
+}
+
 @-webkit-keyframes go-golden {
   100% {
-    color: #ecb51e;
+    color: #fad014;
   }
 }
 
 @keyframes go-golden {
   100% {
-    color: #ecb51e;
+    color: #fad014;
   }
 }
 /*# sourceMappingURL=style.css.map */

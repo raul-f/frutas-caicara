@@ -1,7 +1,7 @@
 // Colors
 
 $magenta: rgba(219, 30, 87, 1); // #DB1E58
-$yellow: rgba(236, 181, 30, 1); // #ECB61E
+$yellow: rgba(250, 208, 20, 1); // #FAD014
 $green: rgba(0, 166, 83, 1); // #00A652
 
 // Sizes
@@ -15,6 +15,10 @@ $nav-height: 80px;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
 }
 
 #navbar {
@@ -51,6 +55,15 @@ $nav-height: 80px;
             animation-fill-mode: forwards;
         }
     }
+}
+
+#first-section {
+    background-image: url("two-ripe-mangoes-1920x1080px.png");
+    padding-top: $nav-height; 
+    min-height: 100vh;
+    max-width: 100%;
+    background-size: 100vw;
+    background-repeat: no-repeat;
 }
 
 @keyframes go-golden {
