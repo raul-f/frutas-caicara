@@ -17,6 +17,10 @@ $nav-height: 80px;
     align-items: $align;
 }
 
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
 #navbar {
     height: $nav-height;
     width: 100%;
