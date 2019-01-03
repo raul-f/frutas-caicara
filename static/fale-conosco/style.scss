@@ -1,12 +1,12 @@
 // Colors
 
 $magenta: rgba(219, 30, 87, 1); // #DB1E58
-$yellow: rgba(236, 181, 30, 1); // #ECB61E
+$yellow: rgba(250, 208, 20, 1); // #FAD014
 $green: rgba(0, 166, 83, 1); // #00A652
 
 // Sizes
 
-$nav-height: 80px;
+$nav-height: 60px;
 
 // Mixins
 
@@ -15,6 +15,10 @@ $nav-height: 80px;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
 }
 
 #navbar {
@@ -36,21 +40,44 @@ $nav-height: 80px;
     #navlink-box {
         height: 100%;
         width: 40%;
-        @include f-style(row, space-around, center);
-        .my-navlink {
-            font-size: 20px;
-            color: white;
-            text-decoration: none;
-        }
-        /*.my-navlink:link, .my-navlink:visited {
-            color: white;
-        }*/
-        .my-navlink:hover, .my-navlink:active {
-            animation-name: go-golden;
-            animation-duration: 200ms;
-            animation-fill-mode: forwards;
+        @include f-style(row, center, center);
+        .link-box {
+            position: relative;
+            padding-right: 40px; 
+            // border: 1px solid white;
+            .my-navlink, .my-navlink-aft {
+                font-size: 20px;
+                color: white;
+                text-decoration: none;
+            }
+            .my-navlink-aft::after {
+                content: "";
+                height: 0.75 * $nav-height;
+                width: 2px;
+                position: absolute;
+                right: 20px;
+                top: -25%;
+                background-color: lighten($color: $magenta, $amount: 30%);
+            }
+            /*.my-navlink:link, .my-navlink:visited {
+                color: white;
+            }*/
+            .my-navlink:hover, .my-navlink:active, .my-navlink-aft:hover, .my-navlink-aft:active {
+                animation-name: go-golden;
+                animation-duration: 200ms;
+                animation-fill-mode: forwards;
+            }
         }
     }
+}
+
+#first-section {
+    background-image: url("two-ripe-mangoes-1920x1080px.png");
+    padding-top: $nav-height; 
+    min-height: 100vh;
+    max-width: 100%;
+    background-size: 100vw;
+    background-repeat: no-repeat;
 }
 
 @keyframes go-golden {

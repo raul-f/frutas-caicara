@@ -1,5 +1,9 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
 #navbar {
-  height: 80px;
+  height: 60px;
   width: 100%;
   padding: 0 20px;
   position: fixed;
@@ -41,23 +45,39 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /*.my-navlink:link, .my-navlink:visited {
-            color: white;
-        }*/
 }
 
-#navbar #navlink-box .my-navlink {
+#navbar #navlink-box .link-box {
+  position: relative;
+  padding-right: 40px;
+  /*.my-navlink:link, .my-navlink:visited {
+                color: white;
+            }*/
+}
+
+#navbar #navlink-box .link-box .my-navlink, #navbar #navlink-box .link-box .my-navlink-aft {
   font-size: 20px;
   color: white;
   text-decoration: none;
 }
 
-#navbar #navlink-box .my-navlink:hover, #navbar #navlink-box .my-navlink:active {
+#navbar #navlink-box .link-box .my-navlink-aft::after {
+  content: "";
+  height: 45px;
+  width: 2px;
+  position: absolute;
+  right: 20px;
+  top: -25%;
+  background-color: #f2a0b9;
+}
+
+#navbar #navlink-box .link-box .my-navlink:hover, #navbar #navlink-box .link-box .my-navlink:active, #navbar #navlink-box .link-box .my-navlink-aft:hover, #navbar #navlink-box .link-box .my-navlink-aft:active {
   -webkit-animation-name: go-golden;
           animation-name: go-golden;
   -webkit-animation-duration: 200ms;
@@ -68,13 +88,13 @@
 
 @-webkit-keyframes go-golden {
   100% {
-    color: #ecb51e;
+    color: #fad014;
   }
 }
 
 @keyframes go-golden {
   100% {
-    color: #ecb51e;
+    color: #fad014;
   }
 }
 /*# sourceMappingURL=style.css.map */

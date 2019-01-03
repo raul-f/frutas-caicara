@@ -6,7 +6,7 @@ $green: rgba(0, 166, 83, 1); // #00A652
 
 // Sizes
 
-$nav-height: 80px;
+$nav-height: 60px;
 
 // Mixins
 
@@ -40,19 +40,33 @@ body {
     #navlink-box {
         height: 100%;
         width: 40%;
-        @include f-style(row, space-around, center);
-        .my-navlink {
-            font-size: 20px;
-            color: white;
-            text-decoration: none;
-        }
-        /*.my-navlink:link, .my-navlink:visited {
-            color: white;
-        }*/
-        .my-navlink:hover, .my-navlink:active {
-            animation-name: go-golden;
-            animation-duration: 200ms;
-            animation-fill-mode: forwards;
+        @include f-style(row, center, center);
+        .link-box {
+            position: relative;
+            padding-right: 40px; 
+            // border: 1px solid white;
+            .my-navlink, .my-navlink-aft {
+                font-size: 20px;
+                color: white;
+                text-decoration: none;
+            }
+            .my-navlink-aft::after {
+                content: "";
+                height: 0.75 * $nav-height;
+                width: 2px;
+                position: absolute;
+                right: 20px;
+                top: -25%;
+                background-color: lighten($color: $magenta, $amount: 30%);
+            }
+            /*.my-navlink:link, .my-navlink:visited {
+                color: white;
+            }*/
+            .my-navlink:hover, .my-navlink:active, .my-navlink-aft:hover, .my-navlink-aft:active {
+                animation-name: go-golden;
+                animation-duration: 200ms;
+                animation-fill-mode: forwards;
+            }
         }
     }
 }
