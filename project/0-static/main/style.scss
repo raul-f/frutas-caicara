@@ -17,9 +17,78 @@ $nav-height: 80px;
     align-items: $align;
 }
 
+// Styling rules
+
 body {
     font-family: 'Ubuntu', sans-serif;
 }
+
+#navbar {
+    height: $nav-height;
+    width: 100%;
+    padding: 0 15px;
+    position: fixed;
+    @include f-style(row, center, center);
+    background-color: $magenta;
+	// box-shadow: 0 2px 10px 0px rgba(158, 158, 158, 0.753);
+	.menu-btn {
+		color: white;
+		font-size: 30px;
+		// width: 30px;
+		padding: 0;
+		background: none;
+		border: none; // 1px solid black;
+		outline: none;
+	}
+    #logo-link {
+        height: 80%;
+		width: auto;
+		flex-grow: 1;
+		// border: 1px solid black;
+		@include f-style(row, center, center);
+        #nav-logo {
+            height: 100%;
+			width: auto;
+			position: relative;
+			right: 15px;
+        }
+    }
+    #navlink-box {
+       display: none;
+    }
+}
+
+#main {
+    // border: 10px solid black;
+	background-image: url("two-ripe-mangoes-matte-1920x1080px.png");
+	background-position: 60%;
+	background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: $nav-height; 
+	min-height: 100vh;
+	@include f-style(column, flex-end, center);
+	#first-section {
+		text-align: justify;
+		padding: 20px 10%;
+		width: 100%;
+		background-color: white;
+		position: relative;
+		bottom: 10vh;
+		h1 {
+			padding-left: 10px;
+			border-left: 2px solid gray;
+			font-size: 30px;
+		}
+	}
+}
+
+#footer {
+	background-color: $magenta;
+	color: white;
+	@include f-style(row, center, center);
+}
+
+/*
 
 #navbar {
     height: $nav-height;
@@ -46,9 +115,11 @@ body {
             color: white;
             text-decoration: none;
         }
-        /*.my-navlink:link, .my-navlink:visited {
+		/*
+		.my-navlink:link, .my-navlink:visited {
             color: white;
-        }*/
+		}
+		*//*
         .my-navlink:hover, .my-navlink:active {
             animation-name: go-golden;
             animation-duration: 200ms;
